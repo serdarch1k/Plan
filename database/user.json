@@ -1,0 +1,14 @@
+{
+    "name": "Steve",
+    "profession": "Software Engineer",
+    "age": "20",
+    "residence": "S.Korea",
+    "address": "S.Korea, Busan",
+    "languages": ["Uzbek", "Korean", "English"],
+    "skills": ["Html", "Css", "JS", "NodeJS", "Python"],
+    "extra_skills": ["Bootstrap, Materialize", "Styling, Sass", "Django, Flask", "GIT Knowledge"],
+    "work_place": "IT Company",
+    "service_desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    "about_me": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "city": "Denau"
+}

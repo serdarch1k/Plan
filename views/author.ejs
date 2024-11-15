@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/s-logo.webp" type="image/png">
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="frame">
+        <!-- Main Frame -->
+        <div class="container">
+            <div class="main_frame">
+
+                <!-- Left Frame -->
+                <div class="left_frame">
+                    <!-- Left frame - 1 Author -->
+                    <div class="left_frame-1">
+                        <div class="left_frame-1_image">
+                            <img src="images/profile.png" alt="#">
+                        </div>
+                        <div class="left_frame-1_title">
+                            <%=user.name%>
+                        </div>
+                        <div class="left_frame-1_desc">
+                            <%=user.profession%>
+                        </div>
+                        <div class="left_frame-1_icons">
+                            <a class="link_href" href="#">
+                                <div class="icon">
+                                    <img src="icon/01_facebook_icon.svg" alt="facebook_icon" class="icon-1">
+                                </div>
+                            </a>
+                            <a class="link_href" href="#">
+                                <div class="icon">
+                                    <img src="icon/02_instagram_icon.svg" alt="instagram_icon" class="icon-2">
+                                </div>
+                            </a>
+                            <a class="link_href" href="#">
+                                <div class="icon">
+                                    <img src="icon/03_twitter_icon.svg" alt="twitter_icon" class="icon-3">
+                                </div>
+                            </a>
+                            <a class="link_href" href="#">
+                                <div class="icon">
+                                    <img src="icon/04_linkedin_icon.svg" alt="linkedin_icon" class="icon-4">
+                                </div>
+                            </a>
+                            <a class="link_href" href="#">
+                                <div class="icon">
+                                    <img src="icon/05_youtube_icon.svg" alt="youtube_icon" class="icon-5">
+                                </div>
+                            </a>
+                            <a class="link_href" href="#">
+                                <div class="icon">
+                                    <img src="icon/06_dribbble_icon.svg" alt="dribbble_icon" class="icon-6">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="left_frame-marginer"></div>
+                    <!-- Left frame - 2 About -->
+                    <div class="left_frame-2">
+                        <div class="left_frame-2_title">
+                            <h3>Age:</h3>
+                            <h3>Residence:</h3>
+                            <h3>Freelance:</h3>
+                            <h3>Address:</h3>
+                        </div>
+                        <div class="left_frame-2_desc">
+                            <p><%=user.age%></p>
+                            <p><%=user.residence%></p>
+                            <p><span>Available</span></p>
+                            <p><%=user.address%></p>
+                        </div>
+                    </div>
+                    <div class="left_frame-marginer"></div>
+                    <!-- Left frame - 3 Languages -->
+                    <div class="left_frame-3">
+                        <h2>Languages</h2>
+                        <div class="left_frame-3_lang">
+                            <p><%=user.languages[0]%></p>
+                            <p>100%</p>
+                        </div>
+                        <img src="images/Languages-img/language_line_1.png" alt="#">
+                        <div class="left_frame-3_lang">
+                            <p><%=user.languages[1]%></p>
+                            <p>80%</p>
+                        </div>
+                        <img src="images/Languages-img/language_line_2.png" alt="#">
+                        <div class="left_frame-3_lang">
+                            <p><%=user.languages[2]%></p>
+                            <p>60%</p>
+                        </div>
+                        <img src="images/Languages-img/language_line_3.png" alt="#">
+                    </div>
+                    <div class="left_frame-marginer"></div>
+                    <!-- Left frame - 4 Skills -->
+                    <div class="left_frame-4 left_frame-3">
+                        <h2>Skills</h2>
+                        <div class="left_frame-3_lang">
+                            <p><%=user.skills[0]%></p>
+                            <p>90%</p>
+                        </div>
+                        <img src="images/Skills-img/skills-line-1.png" alt="#">
+                        <div class="left_frame-3_lang">
+                            <p><%=user.skills[1]%></p>
+                            <p>85%</p>
+                        </div>
+                        <img src="images/Skills-img/skills-line-2.png" alt="#">
+                        <div class="left_frame-3_lang">
+                            <p><%=user.skills[2]%></p>
+                            <p>80%</p>
+                        </div>
+                        <img src="images/Skills-img/skills-line-3.png" alt="#">
+                        <div class="left_frame-3_lang">
+                            <p><%=user.skills[3]%></p>
+                            <p>75%</p>
+                        </div>
+                        <img src="images/Skills-img/skills-line-4.png" alt="#">
+                        <div class="left_frame-3_lang">
+                            <p><%=user.skills[4]%></p>
+                            <p>85%</p>
+                        </div>
+                        <img src="images/Skills-img/skills-line-5.png" alt="#">
+                    </div>
+                    <div class="left_frame-marginer"></div>
+                    <!-- Left frame - 5 Extra Skills -->
+                    <div class="left_frame-5">
+                        <h2>Extra Skills</h2>
+                        <div class="left_frame-5_skills">
+                            <img src="images/ExtraSkills-img/extra-skills-img.png" alt="#">
+                            <p><%=user.extra_skills[0]%></p>
+                        </div>
+                        <div class="left_frame-5_skills">
+                            <img src="images/ExtraSkills-img/extra-skills-img.png" alt="#">
+                            <p><%=user.extra_skills[1]%></p>
+                        </div>
+                        <div class="left_frame-5_skills">
+                            <img src="images/ExtraSkills-img/extra-skills-img.png" alt="#">
+                            <p><%=user.extra_skills[2]%></p>
+                        </div>
+                        <div class="left_frame-5_skills">
+                            <img src="images/ExtraSkills-img/extra-skills-img.png" alt="#">
+                            <p><%=user.extra_skills[3]%></p>
+                        </div>
+                    </div>
+                    <div class="left_frame-marginer"></div>
+                </div>
+    
+                <!-- Middle Frame -->
+                <div class="midd_frame">
+                    <!-- midd frame - 1 -->
+                    <div class="midd_frame-1">
+                        <!-- intro -->
+                        <div class="midd_frame-1_intro">
+                            <h1 class="intro_title">
+                                Doctor neurologists in OHSU Hospital
+                            </h1>
+                            <p class="intro_desc">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus.
+                            </p>
+                            <button class="intro_btn">
+                                <p class="intro_btn-text">Hire me</p>
+                                <img src="btn_icon/btn-arrow.svg" alt="arrow" class="intro_btn-img">
+                            </button>
+                        </div>
+                        <!-- image -->
+                        <div class="midd_frame-1_image">
+                            <img src="images/your-image.png" alt="#">
+                        </div>
+                    </div>
+                    <!-- midd frame - 2 -->
+                     <div class="midd_frame-2">
+                        <h2 class="midd_frame-2_title">
+                            My services
+                        </h2>
+                        <p class="midd_frame-2_desc">
+                            Amet minim mollit non deserunt ullamco est sit aliqua dolor <br> do amet sint. Velit officia consequat duis enim velit mollit. <br> lorem ipsum
+                        </p>
+                        <!-- midd frame - 2 Services -->
+                         <div class="midd_frame-2_services">
+                            <div class="service">
+                                <img src="images/Services-img/services-img-1.png" alt="#" class="services_1-img">
+                                <h3 class="service_title">Web development</h3>
+                                <div class="service_desc">Blog, E-Commerce</div>
+                            </div>
+                            <div class="service">
+                                <img src="images/Services-img/services-img-2.png" alt="#" class="services_1-img">
+                                <h3 class="service_title">UI/UX Design</h3>
+                                <div class="service_desc">Mobile app, website design</div>
+                            </div>
+                            <div class="service">
+                                <img src="images/Services-img/services-img-3.png" alt="#" class="services_1-img">
+                                <h3 class="service_title">Sound Design</h3>
+                                <div class="service_desc">Voice Over, Beat Making</div>
+                            </div>
+                            <div class="service">
+                                <img src="images/Services-img/services-img-4.png" alt="#" class="services_1-img">
+                                <h3 class="service_title">Game Design</h3>
+                                <div class="service_desc">Character Design, Props & Objects</div>
+                            </div>
+                            <div class="service">
+                                <img src="images/Services-img/services-img-5.png" alt="#" class="services_1-img">
+                                <h3 class="service_title">Photography</h3>
+                                <div class="service_desc">Portrait, product photography</div>
+                            </div>
+                            <div class="service">
+                                <h3 class="service_title-2">Advertising</h3>
+                                <div class="service_desc">
+                                    Lorem ipsum dolor sit amet, <br> consectetur adipiscing elit. Vitae <br> nulla diam in ac dictum a urna <br> viverra morbi.
+                                </div>
+                                <a class="service_link" href="#">Order now ></a>
+                            </div>
+                         </div>
+                     </div>
+                </div>
+    
+                <!-- Right Frame -->
+                <div class="right_frame">
+                    <img class="right_frame-img_contrast" src="images/RightFrame-img/contrast_icon.svg" alt="#">
+                    <img class="right_frame-img_home" src="images/RightFrame-img/menu-icon-1.svg" alt="#">
+                    <div class="right_frame-menu">
+                        <img src="images/RightFrame-img/menu-icon-2.svg" alt="#">
+                        <img src="images/RightFrame-img/menu-icon-3.svg" alt="#">
+                        <img src="images/RightFrame-img/menu-icon-4.svg" alt="#">
+                        <img src="images/RightFrame-img/menu-icon-5.svg" alt="#">
+                        <img src="images/RightFrame-img/menu-icon-6.svg" alt="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
