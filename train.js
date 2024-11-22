@@ -181,20 +181,44 @@
 //-------------- Qoldiqli Bo'lish ----------------//
 
 
-function qoldiqBolish(a, b, callback) {
-    if (b === 0) {
-        callback("Mahraj nolga teng bolmasin!", null);
-    } else {
-        const c = a % b;
-        callback(null, c);
-    }
-}
+// function qoldiqBolish(a, b, callback) {
+//     if (b === 0) {
+//         callback("Mahraj nolga teng bolmasin!", null);
+//     } else {
+//         const c = a % b;
+//         callback(null, c);
+//     }
+// }
 
-qoldiqBolish(10, 3, (err, data) => {
-    if (err) {
-        console.log("ERROR:", err);
-    } else {
-        console.log("data:", data);
-        console.log("ANY LOGIC...");
+// qoldiqBolish(10, 3, (err, data) => {
+//     if (err) {
+//         console.log("ERROR:", err);
+//     } else {
+//         console.log("data:", data);
+//         console.log("ANY LOGIC...");
+//     }
+// });
+
+
+
+//-------------- B - TASK ----------------//
+
+async function countDigits(inputString) {
+    if (typeof inputString !== 'string') throw new Error("Input must be a string");
+
+    else {
+        let count = 0;
+        for (let num of inputString) {
+            if (num >= '0' && num <= '9') {
+                count++;
+            }
+        }
+        return count;
     }
-});
+};
+
+async function run() {
+    let result = await countDigits("ad2a54y79we38t0sfgb9");
+    console.log("Result:", result);
+}
+run();
