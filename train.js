@@ -150,21 +150,22 @@
 //-------------- A - TASK ----------------//
 
 
-function countLetter(letter, word, callback) {
-    // Harflarni sanaydi
-    let count = 0;                  // Bu o'zgaruvchi so'z ichida necha marta harf uchraganligini hisoblash uchun ishlatiladi. Va boshlang'ich qiymati "0" qilib belgilanadi.
-    for (let anyWord of word) {     // (word) so'z ichidagi har bir harfni (elementni) anyWord deb nomlangan o'zgaruvchiga olish uchun ishlatiladi. Masalan: "engineer" so'zi uchun sikl quyidagi tartibda ishlaydi: e, n, g, i, n, e, e, r
-        if (anyWord === letter) {   // Agar joriy harf (anyWord) biz qidirayotgan harfga (letter) ga teng bo'lsa, hisoblagichni oshiradi. "===" --> qiymat va type ni solishtiradi
-            count++;                // Har safar qidirilayotgan harf topilganda (count) qiymatini 1 ga oshiradi.
-        }
-    }
+// function countLetter(letter, word, callback) {
+//     // Harflarni sanaydi
+//     let count = 0;                  // Bu o'zgaruvchi so'z ichida necha marta harf uchraganligini hisoblash uchun ishlatiladi. Va boshlang'ich qiymati "0" qilib belgilanadi.
+//     for (let anyWord of word) {     // (word) so'z ichidagi har bir harfni (elementni) anyWord deb nomlangan o'zgaruvchiga olish uchun ishlatiladi. Masalan: "engineer" so'zi uchun sikl quyidagi tartibda ishlaydi: e, n, g, i, n, e, e, r
+//         if (anyWord === letter) {   // Agar joriy harf (anyWord) biz qidirayotgan harfga (letter) ga teng bo'lsa, hisoblagichni oshiradi. "===" --> qiymat va type ni solishtiradi
+//             count++;                // Har safar qidirilayotgan harf topilganda (count) qiymatini 1 ga oshiradi.
+//             // count = count + 1;
+//         }
+//     }
 
-    callback(count);               // Callback bu yerda hisoblangan natija (count)ni (callback parametri) orqali (asinxron) usulda qaytarish uchun ishlatiladi.
-}
+//     callback(count);                // Callback bu yerda hisoblangan natija (count)ni (callback parametri) orqali (asinxron) usulda qaytarish uchun ishlatiladi.
+// }
 
-countLetter("e", "engineer", (result) => {  // Ushbu anonim funksiya result parametrini qabul qiladi (callback orqali kelgan qiymat)
-    console.log(`Harf "e" soni: ${result} ta`);
-});
+// countLetter("e", "engineer", (result) => {  // Ushbu anonim funksiya result parametrini qabul qiladi (callback orqali kelgan qiymat)
+//     console.log(`Harf "e", soni: ${result} ta`);
+// });
 
 
 //----- Kod qanday ishlayapdi? -----//
@@ -174,3 +175,26 @@ countLetter("e", "engineer", (result) => {  // Ushbu anonim funksiya result para
 // 3) Har safar "e" harfi topilganda, count oshirilyapti.
 // 4) Iteratsiya yakunida, umumiy natija "callback" orqali qaytarilyapti. (3 ta)
 // 5) "Callback" funksiyasi "result" qiymatini olib, uni konsolga chiqaryapti.
+
+
+
+//-------------- Qoldiqli Bo'lish ----------------//
+
+
+function qoldiqBolish(a, b, callback) {
+    if (b === 0) {
+        callback("Mahraj nolga teng bolmasin!", null);
+    } else {
+        const c = a % b;
+        callback(null, c);
+    }
+}
+
+qoldiqBolish(10, 3, (err, data) => {
+    if (err) {
+        console.log("ERROR:", err);
+    } else {
+        console.log("data:", data);
+        console.log("ANY LOGIC...");
+    }
+});
