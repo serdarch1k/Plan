@@ -16,6 +16,9 @@ function itemTemplate(item) {
 
 let createField = document.getElementById("create-field");
 
+
+//----- Add new item -----//
+
 document.getElementById("create-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -29,4 +32,29 @@ document.getElementById("create-form").addEventListener("submit", function(e) {
     .catch(err => {
         console.log("Iltimos qayta urinib ko'ring!");
     });
+});
+
+
+//----- Delete and Edit (update) item -----//
+
+document.addEventListener("click", function(e) {
+    // delete oper
+    if(e.target.classList.contains("delete-me")) {
+        if(confirm("Aniq o'chirmoqchimisiz?")) {
+            axios
+            .post("/delete-item", { id: e.target.getAttribute("data-id") })
+            .then((response) => {
+                console.log(response.data);
+                e.target.parentElement.parentElement.remove();
+            })
+            .catch((err) => {
+                console.log("Iltimos qayta urinib ko'ring!");
+            });
+        }
+    }
+
+    // edit oper
+    if(e.target.classList.contains("edit-me")) {
+        alert("Siz edit tugmani bosdingiz");
+    }
 });
