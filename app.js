@@ -34,10 +34,14 @@ app.set("view engine", "ejs");
 // 4: Routing code //
 app.post("/create-item", (req, res) => {
     // TODO: code with db here
+    // Modern Post
     console.log("user entered /create-item");
     console.log(req.body);
     const new_reja = req.body.reja;
     db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+
+        // Traditional Post
+
         // if (err) {
         //     console.log(err);
         //     res.end("something went wrong");

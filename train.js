@@ -227,54 +227,63 @@
 
 //-------------- C - TASK ----------------//
 
-class Shop {
-    constructor(non, lagmon, cola) {
-        this.products = {
-            non: non,
-            lagmon: lagmon,
-            cola: cola,
-        };
-    }
+// class Shop {
+//     constructor(non, lagmon, cola) {
+//         this.products = {
+//             non: non,
+//             lagmon: lagmon,
+//             cola: cola,
+//         };
+//     }
 
-    qoldiq() {
-        const now = new Date();
-        const time = now.toTimeString().split(" ")[0];
-        const { non, lagmon, cola } = this.products;
-        console.log(`Hozir ${time}da ${non} ta non, ${lagmon} ta lagmon va ${cola} ta cola mavjud!`);
-    }
+//     qoldiq() {
+//         const now = new Date();
+//         const time = now.toTimeString().split(" ")[0];
+//         const { non, lagmon, cola } = this.products;
+//         console.log(`Hozir ${time}da ${non} ta non, ${lagmon} ta lagmon va ${cola} ta cola mavjud!`);
+//     }
 
-    sotish(product, amount) {
-        if (this.products[product] === undefined) {
-            console.log(`Xato: ${product} mahsuloti mavjud emas!`);
-            return;
-        }
-        if (this.products[product] < amount) {
-            console.log(`Xato: ${product} mahsulotidan yetarlicha yo'q! Hozirda ${this.products[product]} ta bor.`);
-            return;
-        }
-        this.products[product] -= amount;
-        const now = new Date();
-        const time = now.toTimeString().split(" ")[0];
-        console.log(`Hozir ${time}da ${amount} ta ${product} sotildi!`);
-    }
+//     sotish(product, amount) {
+//         if (this.products[product] === undefined) {
+//             console.log(`Xato: ${product} mahsuloti mavjud emas!`);
+//             return;
+//         }
+//         if (this.products[product] < amount) {
+//             console.log(`Xato: ${product} mahsulotidan yetarlicha yo'q! Hozirda ${this.products[product]} ta bor.`);
+//             return;
+//         }
+//         this.products[product] -= amount;
+//         const now = new Date();
+//         const time = now.toTimeString().split(" ")[0];
+//         console.log(`Hozir ${time}da ${amount} ta ${product} sotildi!`);
+//     }
 
-    qabul(product, amount) {
-        if (this.products[product] === undefined) {
-            this.products[product] = 0;             // Yangi mahsulotni qo'shish uchun.
-        }
-        this.products[product] += amount;
-        const now = new Date();
-        const time = now.toTimeString().split(" ")[0];
-        console.log(`Hozir ${time}da ${amount} ta ${product} qabul qilindi!`);
-    }
+//     qabul(product, amount) {
+//         if (this.products[product] === undefined) {
+//             this.products[product] = 0;             // Yangi mahsulotni qo'shish uchun.
+//         }
+//         this.products[product] += amount;
+//         const now = new Date();
+//         const time = now.toTimeString().split(" ")[0];
+//         console.log(`Hozir ${time}da ${amount} ta ${product} qabul qilindi!`);
+//     }
+// }
+
+// const shop = new Shop(4, 5, 2);
+
+// shop.qoldiq();           // 4 ta non, 5 ta lagmon va 2 ta cola mavjud!
+// shop.sotish("non", 3);   // 3 ta non sotildi!
+// shop.qabul("cola", 4);  // 4 ta cola qabul qilindi!
+// shop.qoldiq();          // 1 ta non, 5 ta lagmon va 6 ta cola mavjud!
+
+
+
+//-------------- D - TASK ----------------//
+
+function checkContent(string1, string2) {
+    const a = string1.toUpperCase().split('').sort().join('');
+    const b = string2.toUpperCase().split('').sort().join('');
+    return a === b;
 }
 
-const shop = new Shop(4, 5, 2);
-
-shop.qoldiq();           // 4 ta non, 5 ta lagmon va 2 ta cola mavjud!
-shop.sotish("non", 3);   // 3 ta non sotildi!
-shop.qabul("cola", 4);  // 4 ta cola qabul qilindi!
-shop.qoldiq();          // 1 ta non, 5 ta lagmon va 6 ta cola mavjud!
-
-
-
+console.log(checkContent("mitgroup", "gmtiprou"));

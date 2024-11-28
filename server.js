@@ -5,7 +5,7 @@ let db;
 const connectionString = "mongodb+srv://David:snYMi24gWogVKaBz@cluster0.rn1yo.mongodb.net/Reja"
 
 mongodb.connect(
-    connectionString, 
+    connectionString,
     {
         useNewUrlParser: true, 
         useUnifiedTopology: true,
