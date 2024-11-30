@@ -21,7 +21,7 @@ const mongodb = require("mongodb");
 // 1: Kirish code //
 app.use(express.static("public")); // user uchun ochiq bo'lgan folder
 app.use(express.json()); // json formatda kelgan ma'lumotlarni objectga o'girib beradi
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
 
 
 // 2: Session code //

@@ -22,7 +22,7 @@ let createField = document.getElementById("create-field");
 document.getElementById("create-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    // Tradiotional emas MODERN Post bo'ldi
+    // Tradiotional emas MODERN Post bo'ldi (Rest API)
     axios.post("/create-item", {reja: createField.value})
     .then(response => {
         document.getElementById("item-list").insertAdjacentHTML("beforeend", itemTemplate(response.data))

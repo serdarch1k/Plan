@@ -280,10 +280,45 @@
 
 //-------------- D - TASK ----------------//
 
-function checkContent(string1, string2) {
-    const a = string1.toUpperCase().split('').sort().join('');
-    const b = string2.toUpperCase().split('').sort().join('');
-    return a === b;
+// function checkContent(string1, string2) {
+//     const a = string1.toUpperCase().split('').sort().join('');
+//     const b = string2.toUpperCase().split('').sort().join('');
+//     return a === b;
+// }
+
+// console.log(checkContent("mitgroup", "gmtiprou"));
+
+
+//-------------- A - TASK ----------------//
+
+
+// function countLetter(letter, word) {
+//     let count = 0;
+//     for (let anyWord of word) {
+//         if (anyWord === anyWord) {
+//             count++;
+//             // count = count + 1;
+//         }
+//     }
+
+//     return(count);
+// }
+
+// countLetter("e", "engineer", (result) => {  // Ushbu anonim funksiya result parametrini qabul qiladi (callback orqali kelgan qiymat)
+//     console.log(`Harf "e", soni: ${result} ta`);
+// });
+
+// const result = countLetter("e", "engineer");
+// console.log(`Harf "e", soni: ${result} ta`);
+
+
+
+//-------------- E - TASK ----------------//
+
+function getReverse(a) {
+    const ans = a.split('').reverse().join('');
+    return(ans);
 }
 
-console.log(checkContent("mitgroup", "gmtiprou"));
+const result = getReverse("Hello");
+console.log("Hello =>", result);
