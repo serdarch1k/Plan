@@ -289,36 +289,41 @@
 // console.log(checkContent("mitgroup", "gmtiprou"));
 
 
-//-------------- A - TASK ----------------//
-
-
-// function countLetter(letter, word) {
-//     let count = 0;
-//     for (let anyWord of word) {
-//         if (anyWord === anyWord) {
-//             count++;
-//             // count = count + 1;
-//         }
-//     }
-
-//     return(count);
-// }
-
-// countLetter("e", "engineer", (result) => {  // Ushbu anonim funksiya result parametrini qabul qiladi (callback orqali kelgan qiymat)
-//     console.log(`Harf "e", soni: ${result} ta`);
-// });
-
-// const result = countLetter("e", "engineer");
-// console.log(`Harf "e", soni: ${result} ta`);
-
-
 
 //-------------- E - TASK ----------------//
 
-function getReverse(a) {
-    const ans = a.split('').reverse().join('');
-    return(ans);
+// function getReverse(a) {
+//     const ans = a.split('').reverse().join('');
+//     return(ans);
+// }
+
+// const result = getReverse("Hello");
+// console.log("Hello =>", result);
+
+// function hasDoubler(a) {
+//     for (let char of a) {
+//         if (a.split(char).length - 1 > 2) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+
+// const result = hasDoubler("Hello");
+// console.log(result); // false yoki true
+
+
+
+//-------------- F - TASK ----------------//
+
+function findDoublers(a) {
+    for (let letter of a) {
+        if (a.split(letter).length - 1 > 1) {
+            return true;
+        }
+    }
+    return false;
 }
 
-const result = getReverse("Hello");
-console.log("Hello =>", result);
+const result = findDoublers("Hello");
+console.log(result);
