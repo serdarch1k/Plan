@@ -316,14 +316,26 @@
 
 //-------------- F - TASK ----------------//
 
-function findDoublers(a) {
-    for (let letter of a) {
-        if (a.split(letter).length - 1 > 1) {
-            return true;
-        }
-    }
-    return false;
+// function findDoublers(a) {
+//     for (let letter of a) {
+//         if (a.split(letter).length - 1 > 1) {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+
+// const result = findDoublers("Hello");
+// console.log(result);
+
+
+
+//-------------- G - TASK ----------------//
+
+function getHighestIndex(a) {
+    let max = Math.max(...a);
+    return a.indexOf(max);
 }
 
-const result = findDoublers("Hello");
+const result = getHighestIndex([5, 21, 12, 21, 8]);
 console.log(result);
